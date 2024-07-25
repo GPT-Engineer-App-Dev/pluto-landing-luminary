@@ -1,4 +1,4 @@
-import { Globe } from "lucide-react";
+import { Planet } from "lucide-react";
 import Index from "./pages/Index.jsx";
 
 /**
@@ -6,9 +6,9 @@ import Index from "./pages/Index.jsx";
  */
 export const navItems = [
   {
-    title: "Pluto",
+    title: "Jupiter",
     to: "/",
-    icon: <Globe className="h-4 w-4" />,
+    icon: <Planet className="h-4 w-4" />,
     page: <Index />,
   },
 ];

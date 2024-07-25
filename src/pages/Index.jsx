@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Camera, Info, MapPin, Thermometer } from "lucide-react";
+import { Wind, Zap, MapPin, Thermometer } from "lucide-react";
 
-const PlutoFacts = [
-  { icon: <MapPin className="h-4 w-4" />, fact: "Average distance from Sun: 3.7 billion miles" },
-  { icon: <Thermometer className="h-4 w-4" />, fact: "Surface temperature: -387°F to -369°F" },
-  { icon: <Info className="h-4 w-4" />, fact: "Diameter: 1,477 miles (18.5% of Earth's)" },
-  { icon: <Camera className="h-4 w-4" />, fact: "Discovered in 1930 by Clyde Tombaugh" },
+const JupiterFacts = [
+  { icon: <MapPin className="h-4 w-4" />, fact: "Average distance from Sun: 484 million miles" },
+  { icon: <Thermometer className="h-4 w-4" />, fact: "Surface temperature: -145°C at cloud tops" },
+  { icon: <Wind className="h-4 w-4" />, fact: "Diameter: 88,846 miles (11x Earth's)" },
+  { icon: <Zap className="h-4 w-4" />, fact: "Powerful magnetic field, 20,000x Earth's" },
 ];
 
 const Index = () => {
@@ -16,19 +16,19 @@ const Index = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-6 text-center">Discover Pluto: The Dwarf Planet</h1>
+      <h1 className="text-4xl font-bold mb-6 text-center">Discover Jupiter: The Gas Giant</h1>
       
       <div className="mb-8">
-        <img src="/placeholder.svg" alt="Pluto" className="mx-auto object-cover w-full h-[400px] rounded-lg shadow-lg" />
+        <img src="/placeholder.svg" alt="Jupiter" className="mx-auto object-cover w-full h-[400px] rounded-lg shadow-lg" />
       </div>
 
       <p className="text-lg mb-6 text-center">
-        Pluto, once considered the ninth planet, is now classified as a dwarf planet. 
-        Despite its small size, it continues to captivate scientists and space enthusiasts alike.
+        Jupiter, the largest planet in our solar system, is a fascinating gas giant known for its 
+        massive size, powerful storms, and numerous moons.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        {PlutoFacts.map((fact, index) => (
+        {JupiterFacts.map((fact, index) => (
           <Card key={index}>
             <CardHeader className="flex flex-row items-center gap-2">
               {fact.icon}
@@ -50,33 +50,33 @@ const Index = () => {
         <TabsContent value="composition">
           <Card>
             <CardHeader>
-              <CardTitle>Composition of Pluto</CardTitle>
-              <CardDescription>What makes up this distant world?</CardDescription>
+              <CardTitle>Composition of Jupiter</CardTitle>
+              <CardDescription>What makes up this massive planet?</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Pluto is primarily composed of rock and ice. Its surface is covered with frozen nitrogen, methane, and carbon monoxide ices.</p>
+              <p>Jupiter is primarily composed of hydrogen and helium, similar to the Sun. It may have a rocky core, but lacks a solid surface like terrestrial planets.</p>
             </CardContent>
           </Card>
         </TabsContent>
         <TabsContent value="exploration">
           <Card>
             <CardHeader>
-              <CardTitle>Exploration of Pluto</CardTitle>
-              <CardDescription>Missions to the edge of our solar system</CardDescription>
+              <CardTitle>Exploration of Jupiter</CardTitle>
+              <CardDescription>Missions to the gas giant</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>The New Horizons spacecraft, launched in 2006, made a historic flyby of Pluto in July 2015, providing unprecedented close-up images and data about the dwarf planet.</p>
+              <p>Several spacecraft have visited Jupiter, including Pioneer 10 and 11, Voyager 1 and 2, Galileo, and Juno. These missions have provided invaluable data about the planet's atmosphere, magnetosphere, and moons.</p>
             </CardContent>
           </Card>
         </TabsContent>
         <TabsContent value="moons">
           <Card>
             <CardHeader>
-              <CardTitle>Pluto's Moons</CardTitle>
-              <CardDescription>The satellites orbiting Pluto</CardDescription>
+              <CardTitle>Jupiter's Moons</CardTitle>
+              <CardDescription>The diverse satellites orbiting Jupiter</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Pluto has five known moons: Charon (the largest), Nix, Hydra, Kerberos, and Styx. Charon is so large relative to Pluto that the two are sometimes referred to as a double dwarf planet system.</p>
+              <p>Jupiter has 79 known moons, with the four largest called the Galilean moons: Io, Europa, Ganymede, and Callisto. These moons are fascinating worlds in their own right, with features like volcanic activity on Io and a subsurface ocean on Europa.</p>
             </CardContent>
           </Card>
         </TabsContent>
@@ -84,21 +84,21 @@ const Index = () => {
 
       <div className="text-center mb-8">
         <Button onClick={() => setShowMore(!showMore)}>
-          {showMore ? "Show Less" : "Learn More About Pluto"}
+          {showMore ? "Show Less" : "Learn More About Jupiter"}
         </Button>
       </div>
 
       {showMore && (
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle>More About Pluto</CardTitle>
+            <CardTitle>More About Jupiter</CardTitle>
           </CardHeader>
           <CardContent>
             <p>
-              Pluto was discovered in 1930 and was long considered the ninth planet in our solar system. However, in 2006, the International Astronomical Union (IAU) reclassified Pluto as a dwarf planet due to the discovery of similar-sized objects in its vicinity.
+              Jupiter has been known since ancient times and is visible to the naked eye in the night sky. It's named after the king of the Roman gods and is the third brightest object in the Earth's sky after the Moon and Venus.
             </p>
             <p className="mt-4">
-              Despite its demotion, Pluto remains an object of fascination for astronomers and the public alike. Its complex surface features, thin atmosphere, and intriguing moon system continue to surprise scientists with each new discovery.
+              One of Jupiter's most famous features is the Great Red Spot, a giant storm that has been raging for at least 400 years. This massive storm is so large that it could fit two to three Earths inside it.
             </p>
           </CardContent>
         </Card>
